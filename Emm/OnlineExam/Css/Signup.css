@@ -1,0 +1,170 @@
+body{
+	background-color: white;
+
+}
+@font-face
+{
+	font-family:ThreeD;
+	src:url(../Img/3d.ttf);
+
+}
+.section
+{
+	margin: 100px 450px;
+	background-color:white;
+	height: 500px;
+	width:500px;
+	box-sizing: border-box;
+	position: relative; 
+}
+
+.section .InputLable
+{
+	top: 0%;
+	left: 0%;
+	min-height: 100px;
+	position: relative;
+	min-width:100%;
+	background-color: #3498db;
+}
+
+.section .InputLable h2
+{	
+	top: 15%;
+	left:22%;
+	letter-spacing: 3px;
+	color: white;
+	font-family: Sensations-and-Qualities;
+	position: absolute;
+}
+.section .InputLable h3
+{
+	left:36%;
+	top: 60%;
+	font-family: Sensations-and-Qualities;
+	color: white;
+	letter-spacing: 4px;
+	position: absolute;
+}
+
+.section .inputFilled
+{
+	top: 24%;
+	left: 0%;
+	min-height: 100%;
+	position: absolute;
+	min-width:100%;
+	background-color: #ced6e0;
+}
+
+.section .lableinput
+{
+	margin-top: 20px;
+	min-height: 100px;
+}
+.lableinput input
+{
+	width: 300px;
+	position: absolute;
+	margin-top: 40px;
+	height: 40px;
+	margin-left: 100px;
+}
+.lableinput label
+{
+	font-size: 20px;
+	color: blue;
+	position: absolute;
+	margin-left: 100px;
+}
+.lableinput .alert
+{
+	font-size: 15px;
+	position: absolute;
+	margin-left: 82px;
+	margin-top: 70px;
+	height: 10px;
+	color: red;
+}
+.lableinput p
+{
+	margin-left: 30px;
+	position: relative;
+}
+@media screen and (max-width: 700px) {
+  
+	.section{
+			position: relative;
+			left: 0%;
+			top: 10%;
+			margin: 0;
+			height: 700px;
+
+		}
+		body
+		{
+			margin:0px;
+			height: 0px;
+			width: 0px;
+			padding: 0px;
+		}
+}
+@media screen and (max-width: 700px) {
+  
+	.section .InputLable
+	{
+		top: 0%;
+		left: 0%;
+		min-height: 200px;
+		position: relative;
+		width: 100%;
+		background-color: #e74c3c;
+
+	}
+	.section .InputLable h3
+	{
+	left:30%;
+	top: 60%;
+	font-size: 50px;
+	}
+	.section .InputLable h2
+	{
+	left:20%;
+	top: 30%;
+	font-size: 40px;
+	}
+	.section .inputFilled
+	{
+		top: 35%;
+		position: absolute;
+		height: 950px;
+	}
+}
+@media screen and (max-width: 1400px) {
+  .lableinput label
+  {
+  	margin-left:40px;
+  	font-size: 30px;
+  } 
+  .lableinput input
+  {
+  	height: 80px;
+  	width: 80%;
+  	font-size: 30px;
+  	margin-left:40px;
+  	margin-top: 40px;
+  } 
+  .lableinput .alert
+  {
+  	margin-left: 20px;
+  	margin-top: 110px;
+  	font-size: 20px;
+  }
+  
+  .section .lableinput
+{
+	margin-top: 50px;
+	min-height: 100px;
+}
+	
+}
