@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.Main{
+			height: 200px;
+			width: 100%;
+			border: 2px solid green;
+		}
+		#text1{
+			height: 40px;
+			width: 40%;
+			margin-top: 50px; 
+			border: 2px solid green;
+		}
+		#text2{
+			height: 50px;
+			width: 30%;
+			margin-top: 50px; 
+			border: 2px solid green;
+		}
+		#P1{
+			background-color: grey;
+		}
+		#P2{
+			background-color: grey;
+		}
+
+
+	</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Dd</title>
+</head>
+<body>
+<div class="Main">
+	<div id="text1">
+		<p id="P1"></p>
+	</div>
+	<div id="text2">
+		<p id="P2"></p>
+	</div>
+</div>
+<script>
+	
+	$('window').ready(function(){
+
+		$('#P1').fadeOut(1);
+		$('#P2').fadeOut(1);
+		var width1=1;
+		var width2=1;
+		var at
+		var at1
+		at=setInterval(function(){
+			if(width1!=50){
+				width1++;
+				$("#P1").text('This program is creative')
+				$("#P1").fadeIn(120)
+				$("#P1").css('margin-left',width1+"%");
+			}
+			else if(width2!=55){
+				width2++;
+
+				$("#P2").text('This program is creative')
+				$("#P2").fadeIn(540)
+				$("#P2").css('margin-left',width2+"%");
+			}
+
+		},20)
+		
+	})
+
+</script>
+</body>
+</html>

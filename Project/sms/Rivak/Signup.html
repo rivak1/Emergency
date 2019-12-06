@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Signup.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="head">
+			<h2>REGISTRATION FORM</h2>
+		</div>
+	
+	<form class="form" method="Post" action=""> 
+		<div class="card">
+			<label class="lbcolor"> 
+
+				<?php
+                    if(in_array("Insert Your StudentName.....!", $error_array))
+                    {
+                       echo "Insert Your StudentName.....!";
+                    }
+                    else if(in_array("StudentName Length should Be high .....!", $error_array))
+                    {
+                       echo "StudentName Length should Be high .....!";
+                    }
+                    else
+                    {
+                       echo "Name";
+                    }
+
+                 ?> 
+
+            </label>
+			<input type="text" name="StudentName" value="<?php if(isset($_SESSION['StudentName'])){echo$_SESSION['StudentName'];}?>">
+		</div>
+		<div class="card">
+			<label class="lbcolor">
+			    <?php
+                    if(in_array("Insert Your FatherName.....!", $error_array))
+                    {
+                        echo "<i style='color:red;'>Insert Your FatherName.....!</i>";
+
+                    }
+                    else if(in_array("FatherName Length should Be high .....!", $error_array))
+                    {
+                        echo "<i style='color:red;'>FatherName Length should Be high .....!</i>";
+
+                    }
+                    else
+                    {
+                        echo "Father Name";
+                    }
+
+                ?>
+            </label>
+
+			<input  type="text" name="FatherName" value="<?php if(isset($_SESSION['FatherName'])){echo$_SESSION['FatherName'];}?>">
+		</div>
+		<div class="card">
+
+			<label class="lbcolor">
+             	<?php
+                    if(in_array("Insert Your Collage Id.....!", $error_array))
+                    {
+                        echo "Insert Your Collage Id.....!";
+                    }
+                    elseif(in_array("Invalid Collage_Id  Format.....!", $error_array))
+                    {
+                        echo "Invalid Collage_Id  Format.....!";
+                    }
+                    elseif (in_array('CollageId is allready used', $error_array))
+                     {
+                        echo "CollageId is allready used";
+                     }
+                     else
+                     {
+                        echo "CollageId";
+                     }
+                ?>
+            </label>
+
+			 <input type="text" name="CollageId" value="<?php if(isset($_SESSION['Collage_Id'])){echo$_SESSION['Collage_Id'];}?>">
+			
+		</div>
+		<div class="card">
+			<label class="lbcolor"> 
+			  <?php
+                 if(in_array("Student_Phone should Be high .....!", $error_array))
+                 {
+                    echo "Student_Phone should Be high .....!";
+                 }
+                 elseif(in_array("Invalid Student_Phone  Format.....!", $error_array))
+                 {
+                    echo "Invalid Student_Phone  Format.....!";
+                 }
+                 else
+                 {
+                     echo "Your Number";
+                 }
+               ?>
+            </label>
+			<input type="text" name="sphone" placeholder="Enter Student Number" value="<?php if(isset($_SESSION['Student_Phone'])){echo$_SESSION['Student_Phone'];}?>">
+		</div>
+		<div class="card">
+			<label class="lbcolor"> 
+				<?php
+                    if(in_array("Father_Phone should Be high .....!", $error_array))
+                    {
+                        echo "Father_Phone should Be high .....!";
+                    }
+                    elseif(in_array("Invalid Father_Phone  Format.....!", $error_array))
+                    {
+                        echo "Invalid Father_Phone  Format.....!";
+                    }
+                    else
+                      {
+                          echo "Mobile Number";
+                      }
+                ?>
+          </label>
+			 <input type="text" name="fphone" placeholder="Enter Father Number" value="<?php if(isset($_SESSION['Father_Phone'])){echo $_SESSION['Father_Phone'];}?>">
+			
+		</div>
+		<div class="card">
+			<label class="lbcolor"> 
+			 <?php
+                if(in_array("Email is allready used", $error_array))
+                {
+                    echo "Email is allready used";
+                }
+                elseif(in_array("Invalid Email Formate.....!", $error_array))
+                {
+                    echo "Invalid Email Formate.....!";
+                }
+                else
+                {
+                    echo "Email";
+                }
+
+              ?>
+            </label>
+			<input  type="email" name="email" value="<?php if(isset($_SESSION['Email'])){echo$_SESSION['Email'];}?>">
+		</div>
+		<div class="card">
+			<label class="lbcolor"> 
+				Gender
+				<?php
+                     if(in_array("Insert Your Gender....!", $error_array))
+                     {
+                         echo "Insert Your Gender....!";
+                     }
+                     else
+                     {
+                     	echo "Your Gender";
+                     }
+                ?>
+             </label>
+			 <select name="Gender">
+                 <option value=""selected="selected">Gender</option>
+                 <option value="Male">Male</option>
+                 <option value="Female">Female</option>
+                 <option value="Other">Other</option>
+              </select>
+		</div>
+		<div class="card">
+
+			<label class="lbcolor">    
+                    <?php
+                        if(in_array("Insert Your  Branch.....!", $error_array))
+                        {
+                           echo "Insert Your Branch....!";
+                        }
+                        else
+                        {
+                        	echo Your Branch;
+                        }
+            </label>
+
+			 <select name="Branch">
+
+                  <option  selected="selected" value="">Select Your Branch</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Information technology">Information technology</option>
+                  <option value="Electricl Engineering">Electricl Engineering</option>
+                  <option value="Electric And Electronic">Electric And Electronic</option>
+                  <option value="Mechnical Engineering">Mechnical Engineering</option>
+                  <option value="Civil  Engineering">Civil  Engineering</option>
+
+             </select>
+		</div>
+
+		<div class="card">
+
+			<label class="lbcolor">
+				<?php
+                    if(in_array("Insert Your Password.....!", $error_array))
+                    {
+                         echo "<i style='color:red;'>Insert Your  Password.....! </i>";
+                    }
+                    elseif(in_array("Password should Be high .....!", $error_array))
+                    {
+                         echo "<i style='color:red;'>Password should Be high .....!</i>";
+                    }
+                    else if(in_array("Invalid Password  Format.....!", $error_array))
+                    {
+                          echo "<i style='color:red;'>Invalid Password  Format.....!'</i>";
+                    }
+                    else if(in_array("Password Not Match.....!", $error_array))
+                    {
+                          echo "<i style='color:red;'>Password Not Match.....!</i>";
+                    }
+                    else
+                    {
+                    	echo "Your Password";
+                    }
+                ?>
+            </label>
+			<input id="input1" class="input--style-5 password" type="password" name="password" placeholder="Xyz@12345">
+		</div>
+
+		<div class="card">
+			<label class="lbcolor"> 
+		
+            </label>
+			 <input id="input" class="input--style-5" type="password" name="Confrim_password" placeholder="Xyz@12345">	
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+</div>
+<script type="text/javascript" src="Signup.js">
+	
+</script>
+</body>
+</html>

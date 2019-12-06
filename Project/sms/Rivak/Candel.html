@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			margin-top: 50px;
+		}
+		#btn1{
+			margin-left: -35px;
+		}
+		#move{
+			margin-left: 400px;
+		}
+		#main{
+			margin-top: -40px;
+			border:2px solid black;
+			height: 760px;
+			width:100%;
+		}
+		#div1
+		{	margin-left: 30px;
+			margin-top: 120px;
+			height: 200px;
+			width:5%;
+			border-radius: 100%;
+			border:1px solid green;
+			background: linear-gradient(red,yellow);
+			}
+		#div2
+		{
+			background-color: grey;
+			height: 300px;
+			margin-left: 10px;
+			width:9%;
+			border-radius: 15%;
+			
+		}
+		button{
+			font-size: 12px;
+			margin-left: 12px;
+			height: 50px;
+			width:100px;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 2px white;
+			margin-top: 7px;
+			background: linear-gradient(white,yellow);
+		}
+		input{
+			height: 20px;
+			width: 500px;
+			border-radius: 20%;
+			background-color: blue;
+			color: white;
+		}
+		input["placeholder"]{
+			color: black;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>LIGHT IN ROOM</title>
+</head>
+<body>
+		<div  id="main">
+		<div id="div1"></div>
+		<div id="div2">
+			
+		</div>
+			<center><button id="btn1">Play</button></center>
+			<div id="move">
+			<button value="red&yellow">Red&yellow</button>
+			<button value="green&white">green&white</button>
+			<button value="yellow&pink">yellow&pink</button>
+			<button value="black&blue">black&blue</button>
+			<button id="btn">backgrnd</button><br>
+		</div>
+		</div>
+		<div><center><input type="text" placeholder="Enter any two color with ',' sepratr"></center></div>
+		
+<script src="cc.js">
+</script>
+</body>
+</html>
